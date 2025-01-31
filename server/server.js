@@ -12,6 +12,7 @@ app.get("/api/quiz", async (req, res) => {
     console.log(response.data);
   } catch (error) {
     res.status(500).json({ error: "Failed to fetch quiz data" });
+    console.error("Error fetching quiz data:", error);
   }
 });
 
